@@ -7,8 +7,8 @@ let countElementResult = result.length;
 console.log(countElementResult);
 
 
-let user1 = [1, 2, 3];
-let user2 = [1, 2, 3];
+let user1 = ['k', 'n', 'b'];
+let user2 = ['k', 'n', 'b'];
 
 function getRandomNumber () {
     user1.Mach.random();
@@ -20,10 +20,12 @@ function getRandomNumber2 () {
 }
 console.log (getRandomNumber2)
 
-function play (getRandomNumber, getRandomNumber2) {
-    if (getRandomNumber > getRandomNumber2) {
+function win (getRandomNumber, getRandomNumber2){
+    if ('k', 'n'  || 'n', 'b') {
         console.log("Выйграл певый игрок!")
-    }  else console.log("Выйграл второй игрок!")
+    }   else if ('n', 'k' || 'b', 'n') {
+        console.log("Выйграл второй игрок!")
+    }   else console.log ("НИЧЬЯ!")
 }
 
-play()
+win()
