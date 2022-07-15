@@ -10,22 +10,33 @@ console.log(countElementResult);
 let user1 = ['k', 'n', 'b'];
 let user2 = ['k', 'n', 'b'];
 
-function getRandomNumber () {
-    user1.Mach.random();
+function getRandomNumber() {
+    return user1[Math.floor(Math.random() * 3)];
 }
-console.log (getRandomNumber)
+console.log (getRandomNumber())
 
-function getRandomNumber2 () {
-    user2.Mach.random();
+function getRandomNumber2() {
+    return user2[Math.floor(Math.random() * 3)];
 }
-console.log (getRandomNumber2)
+console.log (getRandomNumber2())
 
 function win (getRandomNumber, getRandomNumber2){
-    if ('k', 'n'  || 'n', 'b') {
-        console.log("Выйграл певый игрок!")
-    }   else if ('n', 'k' || 'b', 'n') {
-        console.log("Выйграл второй игрок!")
-    }   else console.log ("НИЧЬЯ!")
+
+    if (getRandomNumber === 'k' && getRandomNumber2 == 'n') {
+        console.log("Выйграл певый игрок!");
+    }   else if (getRandomNumber === 'b' && getRandomNumber2 === 'k') {
+        console.log("Выйграл певый игрок!");
+    }   else if (getRandomNumber === 'n' && getRandomNumber2 === 'b') {
+        console.log("Выйграл певый игрок!");
+    }   else if (getRandomNumber === 'n' && getRandomNumber2 === 'k') {
+        console.log("Выйграл второй игрок!");
+    }   else if (getRandomNumber === 'b' && getRandomNumber2 === 'n') {
+        console.log("Выйграл второй игрок!");
+    }   else if (getRandomNumber === 'k' && getRandomNumber2 === 'b') {
+        console.log("Выйграл второй игрок!");
+    }   else if (getRandomNumber === getRandomNumber2) {
+        console.log ("НИЧЬЯ!");
+    }       
 }
 
-win()
+win(getRandomNumber(), getRandomNumber2());
